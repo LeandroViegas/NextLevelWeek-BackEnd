@@ -3,8 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "allowSyntheticDefaultImports": true, 
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   }
