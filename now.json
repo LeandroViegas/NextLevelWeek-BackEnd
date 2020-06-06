@@ -1,4 +1,4 @@
 {
     "version": 2,
-    "builds": [{ "src": "server/*.tsx", "use": "@now/node" }]
+    "builds": [{ "src": "*.ts", "use": "@now/node" }]
   }
