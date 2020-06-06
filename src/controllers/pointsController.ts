@@ -68,7 +68,7 @@ class PointsController {
         const point = await knex('points').where('id', id).first();
 
         if(!point){
-            return response.status(400).json({nessage: "Point not found."});
+            return response.status(400).json({message: "Point not found."});
         }
 
         const items = await knex('items')
