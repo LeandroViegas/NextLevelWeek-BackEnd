@@ -1,14 +1,11 @@
 {
     "version": 2,
     "builds": [
-        {"src": "/(.*)", "use": "@now/node"},
-        {"src": "/src/(.*)", "use": "@now/static"},
-        {"src": "/uploads/(.*)", "use": "@now/static"}
-      ],
+      { "src": "/index.js", "use": "@now/node-server"},
+      { "src": "/public/**", "use": "@now/static"}
+    ],
     "routes": [
-        {
-            "src": "/(.*)", 
-            "dest": "index.ts"
-        }
+        { "src": "/uploads/(.+js|.+svg|.+css|.+png|.+ico|robots.txt)", "dest": "/src/$1" },
+        { "src": "", "dest": "/index.js" }
     ]
   }
