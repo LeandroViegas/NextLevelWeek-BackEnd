@@ -1,20 +1,11 @@
 {
     "version": 2,
     "builds": [
-      { "src": "/index.js", "use": "@now/node-server"},
-      { "src": "/public/**", "use": "@now/static"}
+      { "src": "/(.*)", "use": "@now/static"},
+      { "src": "/index.js", "use": "@now/node-server"}
+      
     ],
     "routes": [
-        { "src": "/uploads/(.*)","headers": { "cache-control": "s-maxage=604800" }, "dest": "/uploads/$1" },
-        { "src": "", "dest": "/index.js" },
-        {
-          "src": ".*",
-          "headers": { "Cache-Control": "max-age=3600" },
-          "continue": true
-        },
-        {
-          "src": "/([^/]+)",
-          "dest": "/?slug=$1"
-        }
+      { "src": "/(.*)", "dest": "/index.ts" }
     ]
   }
