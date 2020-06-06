@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.js",
+  "main": "index.ts",
   "scripts": {
-    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
-    "build": "ts-node src/server.ts",
-    "start": "ts-node src/server.ts",
+    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules indext.ts",
+    "build": "ts-node index.ts",
+    "start": "ts-node index.ts",
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest"
   },
