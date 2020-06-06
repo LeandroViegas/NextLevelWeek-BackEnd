@@ -1,14 +1,13 @@
 {
     "version": 2,
     "builds": [
-      { 
-        "src": "/(.*)", 
-        "use": "@now/node" 
-      }
-    ],
+        {"src": "/(.*)", "use": "@now/node"},
+        {"src": "/src/database(.*)", "use": "@now/static"},
+        {"src": "/uploads/(.*)", "use": "@now/static"}
+      ],
     "routes": [
         {
-            "src": "/(.*)", 
+            "src": "/**", 
             "dest": "index.ts"
         }
     ]
