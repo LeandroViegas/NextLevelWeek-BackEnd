@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "build": "ts-node src/server.ts",
-    "start": "npx tsc && ts-node src/server.js",
+    "start": "ts-node src/server.ts",
     "knex:seed": "npx knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "npx knex --knexfile knexfile.ts migrate:latest"
   },
