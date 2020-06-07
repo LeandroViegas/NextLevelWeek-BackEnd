@@ -4,13 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-uploads/*
-!uploads/.gitkeep
-
 # testing
 /coverage
 
-*.sqlite
 # production
 /build
 
