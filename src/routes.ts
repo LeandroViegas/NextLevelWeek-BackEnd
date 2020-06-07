@@ -14,7 +14,7 @@ const pointsController = new  PointsController();
 const itemsController = new  ItemsController();
 
 routes.get('/items', itemsController.index);
-routes.post('/points', upload.single('image'), celebrate({body: Joi.object().keys({
+routes.post('/points',/* upload.single('image'),*/ celebrate({body: Joi.object().keys({
     name: Joi.string().required(),
     email: Joi.string().required().email(),
     whatsapp: Joi.number().required(),

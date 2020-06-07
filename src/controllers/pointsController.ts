@@ -22,7 +22,7 @@ class PointsController {
             }
         });
 
-        return response.json(points);
+        return response.json(serializedPoints);
     }
 
     async create(request: Request, response: Response) {
@@ -40,7 +40,7 @@ class PointsController {
         const trx = await knex.transaction();
        
         const point = {
-            image: request.file.filename,
+            image: 'https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=40',
             name,
             email,
             whatsapp,
